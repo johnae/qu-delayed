@@ -5,7 +5,7 @@ module Qu
     module Backend
       module Mongoid
         def enqueue_at(payload)
-          payload_id = Moped::BSON::ObjectId.from_time(payload.run_at, :unique => true)
+          payload_id = Moped::BSON::ObjectId.from_time(payload.run_at)#, :unique => true) # not sure if this can cause problems
           delayed_jobs.insert({
                                 :_id => payload_id,
                                 :klass => payload.klass.to_s,
