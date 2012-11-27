@@ -16,7 +16,6 @@ GEM
     coderay (1.0.8)
     diff-lcs (1.1.3)
     ffi (1.2.0)
-    git (1.2.5)
     guard (1.5.4)
       listen (>= 0.4.2)
       lumberjack (>= 1.0.2)
@@ -30,11 +29,6 @@ GEM
       spork (>= 0.8.4)
       sys-proctable
     i18n (0.6.1)
-    jeweler (1.8.4)
-      bundler (~> 1.0)
-      git (>= 1.2.5)
-      rake
-      rdoc
     json (1.7.5)
     listen (0.6.0)
     lumberjack (1.0.2)
@@ -61,7 +55,6 @@ GEM
     qu-mongoid (0.2.0)
       mongoid (~> 3.0)
       qu
-    rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
     rspec (2.8.0)
@@ -88,7 +81,6 @@ DEPENDENCIES
   guard
   guard-rspec
   guard-spork
-  jeweler (~> 1.8.3)
   qu (= 0.1.4)
   qu-mongo
   qu-mongoid
