@@ -21,7 +21,8 @@ module Qu
         # If there is no job to enqueue returns +nil+.
         def next_delayed_job
           doc = connection.command(:findAndModify => delayed_jobs.name, :query => {:_id => {'$lte' => Moped::BSON::ObjectId.from_time(Time.now) }}, :remove => true, :safe => true)
-          return nil if doc.nil?
+          return nil unless doc && doc['value']
+          doc = doc['value']
 
           Qu::Delayed::Payload.new(doc).undelay
         rescue ::Moped::Errors::OperationFailure
