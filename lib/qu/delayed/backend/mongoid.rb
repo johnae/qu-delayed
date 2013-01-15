@@ -1,4 +1,9 @@
 require 'qu/backend/mongoid'
+begin
+  require 'bson'
+rescue LoadError
+  warn "WARNING: 10gen BSON not available, unique id's from time not possible!"
+end
 
 module Qu
 
