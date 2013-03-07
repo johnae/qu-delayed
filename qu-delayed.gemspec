@@ -22,6 +22,8 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  
+  gem.add_dependency("moped", [">= 1.4.0"])
 
 
   gem.add_runtime_dependency("qu", ["= 0.1.4"])
@@ -35,6 +37,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency("guard-spork", [">= 0"])
   gem.add_development_dependency("qu-mongo", [">= 0"])
   gem.add_development_dependency("qu-mongoid", [">= 0"])
-  gem.add_development_dependency("bson_ext", [">= 0"])
 
 end
